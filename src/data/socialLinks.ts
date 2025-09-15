@@ -1,62 +1,39 @@
-import {
-  faGithub,
-  faLinkedin,
-  faTelegram,
-  faInstagram,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin, faTelegram, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faBlog, faEnvelope, faPen } from "@fortawesome/free-solid-svg-icons";
+import { VelogIcon, TistoryIcon } from "@/components/icons";
 import Strings from "@/constants/strings";
 import type { ISocialLinkItem } from "@/types";
 
 const socialLinks: ISocialLinkItem[] = [
   {
+    name: Strings.email,
+    url: Strings.primaryEmailLink,
+    icon: faEnvelope,
+    text: "Email",
+  },
+  {
     name: Strings.github,
     url: Strings.githubLink,
     icon: faGithub,
-    text: Strings.githubUsername,
+    text: "GitHub",
   },
   {
     name: Strings.linkedIn,
     url: Strings.linkedInLink,
     icon: faLinkedin,
-    text: Strings.linkedInUsername,
+    text: "LinkedIn",
   },
   {
-    name: Strings.telegram,
-    url: Strings.telegramLink,
-    icon: faTelegram,
-    text: Strings.telegramUsername,
+    name: Strings.tistory,
+    url: Strings.tistoryLink,
+    icon: TistoryIcon,
+    text: "Blog (2023~)",
   },
   {
-    name: Strings.instagram,
-    url: Strings.instagramLink,
-    icon: faInstagram,
-    text: Strings.instagramUsername,
-  },
-  {
-    name: Strings.twitter,
-    url: Strings.twitterLink,
-    icon: faXTwitter,
-    text: Strings.twitterUsername,
-  },
-  {
-    name: Strings.email,
-    url: Strings.primaryEmailLink,
-    icon: faEnvelope,
-    text: Strings.primaryEmail,
-  },
-  {
-    name: Strings.buyMeACoffee,
-    url: Strings.buyMeACoffeeLink,
-    icon: "/images/buy-me-a-coffee.png",
-    text: Strings.buyMeACoffeeUsername,
-  },
-  {
-    name: Strings.koFi,
-    url: Strings.koFiLink,
-    icon: "/images/ko-fi.png",
-    text: Strings.buyMeACoffeeUsername,
+    name: Strings.velog,
+    url: Strings.velogLink,
+    icon: VelogIcon,
+    text: "Blog (2021~2023)",
   },
 ];
 

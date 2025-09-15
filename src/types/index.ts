@@ -1,5 +1,6 @@
 import { IconDefinition, IconProp } from "@fortawesome/fontawesome-svg-core";
 import type { MouseEventHandler, ReactNode, RefObject } from "react";
+import React, { ReactElement } from "react";
 
 export interface INavMenuItem {
   id: string;
@@ -79,7 +80,7 @@ export interface ISkillItem {
 
 export interface ISocialLinkItem {
   url: string;
-  icon: IconDefinition | string;
+  icon: IconDefinition | string | ReactElement | React.ComponentType<any>;
   text: string;
   name?: string;
 }
@@ -92,8 +93,7 @@ export interface MenuItemProps {
   current?: string;
 }
 
-export interface DropdownMenuProps
-  extends Omit<MenuItemProps, "items" | "current"> {
+export interface DropdownMenuProps extends Omit<MenuItemProps, "items" | "current"> {
   submenus: INavMenuItem[];
   dropdown: boolean;
 }

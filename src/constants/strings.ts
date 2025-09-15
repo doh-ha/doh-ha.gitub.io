@@ -1,38 +1,27 @@
 class Strings {
-  static telegram = "Telegram";
-  static telegramLink = "https://telegram.me/nixrajput";
-  static telegramUsername = "nixrajput";
+  static email = "Email";
+  static primaryEmailLink = "mailto:hayeonlr@gmail.com";
+  //static primaryEmail = "nkr.nikhil.nkr@gmail.com";
 
   static github = "GitHub";
-  static githubLink = "https://www.github.com/nixrajput";
-  static githubUsername = "nixrajput";
+  static githubLink = "https://www.github.com/doh-ha";
+  //static githubUsername = "GitHub";
 
   static linkedIn = "LinkedIn";
-  static linkedInLink = "https://www.linkedin.com/in/nixrajput";
-  static linkedInUsername = "nixrajput";
+  static linkedInLink = "https://www.linkedin.com/in/hayeon-doh-45102a252/";
+  //  static linkedInUsername = "LinkedIn";
 
-  static instagram = "Instagram";
-  static instagramLink = "https://www.instagram.com/nixrajput";
-  static instagramUsername = "nixrajput";
+  static tistory = "Tistory";
+  static tistoryLink = "https://ardohtory.tistory.com";
+  //static tistoryUsername = "Blog (2023~";
 
-  static twitter = "Twitter";
-  static twitterLink = "https://www.twitter.com/nixrajput07";
-  static twitterUsername = "nixrajput07";
+  static velog = "Velog";
+  static velogLink = "https://velog.io/@ardoh/posts";
+  //static buyMeACoffeeUsername = "Blog (2021~2023)";
 
-  static email = "Email";
-  static primaryEmailLink = "mailto:nkr.nikhil.nkr@gmail.com";
-  static primaryEmail = "nkr.nikhil.nkr@gmail.com";
-
-  static buyMeACoffee = "BuyMeACoffee";
-  static buyMeACoffeeLink = "https://buymeacoffee.com/nixrajput";
-  static buyMeACoffeeUsername = "nixrajput";
-
-  static koFi = "Ko-Fi";
-  static koFiLink = "https://ko-fi.com/nixrajput";
-  static koFiUsername = "nixrajput";
-
-  static fullName = "Nikhil Rajput";
-  static shortName = "nixrajput";
+  // static koFi = "Ko-Fi";
+  // static koFiLink = "https://ko-fi.com/nixrajput";
+  // static koFiUsername = "nixrajput";
 }
 
 export default Strings;
