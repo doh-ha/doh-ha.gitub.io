@@ -5,18 +5,52 @@ import { Timeline } from "@/components/common/timeline";
 import ExperienceItem from "./ui/ExperienceItem";
 import experiences from "@/data/experiences";
 
-const HomeSection3 = ({ id }: { id: string }) => {
-  return (
-    <ResponsiveBox classNames="dark:bg-[var(--bgColor)] bg-[var(--bgColor)] dark:bg-grid-white/[0.1] bg-grid-white/[0.1] min-h-screen items-center justify-center" id={id}>
-      <ConstrainedBox classNames="p-4 py-16">
-        <SectionTitle>Experiences</SectionTitle>
+// 기존 평면 타입: IExperienceItem = { company, designation, startDate, endDate?, description: string[] }
 
+type IExperienceRole = {
+  designation: string;
+  startDate: string;
+  endDate?: string;
+  description: string[];
+};
+
+type IExperienceCompany = {
+  company: string;
+  roles: IExperienceRole[];
+};
+
+const groupByCompany = (items: any[]): IExperienceCompany[] => {
+  const map: Record<string, IExperienceCompany> = {};
+
+  for (const exp of items) {
+    if (!map[exp.company]) {
+      map[exp.company] = { company: exp.company, roles: [] };
+    }
+    map[exp.company].roles.push({
+      designation: exp.designation,
+      startDate: exp.startDate,
+      endDate: exp.endDate,
+      description: exp.description,
+    });
+  }
+
+  // 정렬 없이 입력된 순서 유지
+  return Object.values(map);
+};
+
+const HomeSection3 = ({ id }: { id: string }) => {
+  const grouped = groupByCompany(experiences);
+
+  return (
+    <ResponsiveBox id={id} classNames="mt-24">
+      <ConstrainedBox>
+        <SectionTitle>Experiences</SectionTitle>
         <Timeline
-          data={experiences.map((exp) => ({
-            // ⬇️ 왼쪽 컬럼에 올 내용(회사명)
-            title: exp.company,
-            // ⬇️ 오른쪽 컬럼(포지션+기간+설명)은 컴포넌트에서 처리
-            content: <ExperienceItem data={exp} />,
+          data={grouped.map((company) => ({
+            // ⬅️ 왼쪽 컬럼: 회사명
+            title: company.company,
+            // ➡️ 오른쪽 컬럼: 회사 내 여러 포지션
+            content: <ExperienceItem data={company} />,
           }))}
         />
       </ConstrainedBox>
