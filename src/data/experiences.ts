@@ -2,11 +2,11 @@ import { IExperienceItem } from "@/types";
 
 const experiences: IExperienceItem[] = [
   {
-    designation: "Software Development Engineer",
-    company: "StarApps Studio",
-    startDate: "Jul 2024",
+    designation: "Undergraduate Research Intern",
+    company: "KIXLAB KAIST",
+    startDate: "Jun 2025",
     isCurrentJob: true,
-    location: "Pune, India",
+    location: "Deajeon, South Korea",
     description: [
       "Currently working on developing innovative software solutions.",
       "Contributing to large-scale projects with a focus on performance optimization.",
@@ -15,12 +15,11 @@ const experiences: IExperienceItem[] = [
     ],
   },
   {
-    designation: "Full Stack Developer",
-    company: "Merito",
-    startDate: "Feb 2023",
-    endDate: "Jul 2024",
-    isCurrentJob: false,
-    location: "Pune, India",
+    designation: "Undergraduate Research Intern",
+    company: "HCIL EWHA",
+    startDate: "Feb 2024",
+    isCurrentJob: true,
+    location: "Seoul, South Korea",
     description: [
       "Developed over 5 web applications with seamless backend API integration.",
       "Streamlined workflows by eliminating redundant data, boosting efficiency.",
@@ -30,12 +29,12 @@ const experiences: IExperienceItem[] = [
     ],
   },
   {
-    designation: "Full Stack Development Intern",
-    company: "TECHOX LLP",
-    startDate: "May 2021",
-    endDate: "Jul 2022",
+    designation: "AI Member",
+    company: "Google Developers Group on Campus Ewha (GDGoC) ",
+    startDate: "Sep 2024",
+    endDate: "Jun 2025",
     isCurrentJob: false,
-    location: "Remote",
+    location: "Seoul, South Korea",
     description: [
       "Revamped and enhanced 3+ mobile apps using Flutter.",
       "Deployed RESTful APIs for seamless app-server integration.",
@@ -44,8 +43,22 @@ const experiences: IExperienceItem[] = [
     ],
   },
   {
-    designation: "Web Development Intern",
-    company: "Career Corner Education Pvt Ltd",
+    designation: "ML Member",
+    company: "Ewha AI & Data Analysis Club (Euron)",
+    startDate: "Jul 2021",
+    endDate: "Nov 2021",
+    isCurrentJob: false,
+    location: "Remote",
+    description: [
+      "Spearheaded website development and enhancements for company portals.",
+      "Prioritized clean, reusable code with modern tech stacks.",
+      "Efficiently managed multiple tasks with minimal supervision.",
+      "Collaborated with senior team members to meet and exceed project goals.",
+    ],
+  },
+  {
+    designation: "Frontend Member",
+    company: "Ewha Web Development Carrer Club (EFUB)",
     startDate: "Jul 2021",
     endDate: "Nov 2021",
     isCurrentJob: false,
